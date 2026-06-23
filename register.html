@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us - Sweetiis</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="register-bg"></div>
+
+    <section class="register-section">
+
+    <div class="register-card">
+
+        <!-- KIRI -->
+        <div class="register-left">
+
+            <h2>Sign Up</h2>
+
+            <input type="text"
+                   id="fullname"
+                   placeholder="Full Name">
+
+            <input type="text"
+                   id="phone"
+                   placeholder="Phone Number">
+
+            <input type="email"
+                   id="email"
+                   placeholder="Email">
+
+            <input type="password"
+                   id="password"
+                   placeholder="Password">
+
+            <button class="register-btn"
+                    onclick="register()">
+
+                Register Your Account
+
+            </button>
+
+            <p class="login-text">
+
+                Sudah punya akun?
+
+                <a href="signin.html">
+                    Login sekarang
+                </a>
+
+            </p>
+
+        </div>
+
+        <!-- KANAN -->
+        <div class="register-right">
+
+            <img src="images/logo-sweetiis.png"
+                 alt="Sweetiis">
+
+            <p>
+
+                Produk berkualitas yang
+                hadir untuk melengkapi
+                setiap momenmu
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+
+function register(){
+
+    let fullname =
+        document.getElementById("fullname").value;
+
+    let phone =
+        document.getElementById("phone").value;
+
+    let email =
+        document.getElementById("email").value;
+
+    let password =
+        document.getElementById("password").value;
+
+    if(
+        fullname === "" ||
+        phone === "" ||
+        email === "" ||
+        password === ""
+    ){
+
+        alert(
+            "Please complete all fields!"
+        );
+
+        return;
+    }
+
+    alert(
+        "Registration Successful!"
+    );
+
+    window.location.href =
+    "signin.html";
+}
+
+</script>
+
+</body>
+</html>
+

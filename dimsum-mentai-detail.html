@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us - Sweetiis</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="images/logo sweetii.png" alt="Sweetiis Logo">
+        </div>
+
+        <ul>
+   <li><a href="index.html">Home</a></li>
+   <li><a href="about.html">About Us</a></li>
+   <li><a href="products.html">Products</a></li>
+   <li><a href="contact-us.html">Contact Us</a></li>
+</ul>
+
+<div class="icons">
+
+    <a href="products.html">
+        <img class="search-icon"
+             src="images/search.png">
+    </a>
+
+    <a href="cart.html">
+        <img class="cart-icon"
+             src="images/cart.png">
+    </a>
+
+    <a href="signin.html">
+        <img class="profile-icon"
+             src="images/person-circle 2.png">
+    </a>
+
+</div>
+
+    </nav>
+
+   <section class="product-detail dimsum-detail">
+
+    <div class="detail-card">
+
+        <div class="detail-image">
+
+           <img src="images/dimsum mentai.jpeg" alt="Dimsum Mentai">
+
+            <div class="price-tag">
+                Rp.60.000
+            </div>
+
+            <img src="images/star.png" class="star-top" alt="">
+            <img src="images/star.png" class="star-bottom" alt="">
+
+        </div>
+
+        <div class="detail-content">
+
+    <h1 class="dimsum-title">Dimsum Mentai</h1>
+
+    <p>
+        Dimsum lembut dan saus mentai creamy melimpah yang dibakar hingga
+        harum dan gurih, menghadirkan rasa savory dan lumer di setiap gigitan 
+        bikin menu satu ini jadi comfort food favorit yang nagih banget.
+    </p>
+
+    <button onclick="addToCart(
+        'Dimsum Mentai',
+        60000,
+        'images/dimsum mentai.jpeg'
+    )">
+        Add To Cart
+    </button>
+
+</div>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Logo -->
+        <div class="footer-brand">
+            <img src="images/logo sweetii.png" alt="Sweetiis">
+
+            <p>Follow and contact us on:</p>
+
+    <div class="social-icons">
+    <a href="mailto:sweetiisstmk@gmail.com">
+        <img src="images/gmail.png" alt="Email">
+    </a>
+
+    <a href="https://wa.me/6282325337253">
+        <img src="images/wa.png" alt="WhatsApp">
+    </a>
+
+    <a href="https://instagram.com/sweetiis">
+        <img src="images/Instagram.png" alt="Instagram">
+    </a>
+    </div>
+
+</div>
+
+        <!-- Navigation -->
+        <div class="footer-nav">
+            <h3>OUR SWEETIIS NAVIGATION</h3>
+
+            <div class="nav-links">
+
+                <div>
+                    <a href="#">HOME</a>
+                    <a href="#">ABOUT US</a>
+                    <a href="#">PRODUCTS</a>
+                </div>
+
+                <div>
+                    <a href="#">LOCATION</a>
+                    <a href="#">CONTACT US</a>
+                    <a href="#">PROFILE</a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-contact">
+
+    <h3>CONTACTS</h3>
+
+    <p>
+        <i class="fa-solid fa-location-dot"></i>
+        Address : Jalan Seroja, Timika
+    </p>
+
+    <p>
+        <i class="fa-solid fa-envelope"></i>
+        Email : sweetiisstmk@gmail.com
+    </p>
+
+    <div class="phone-box">
+
+    <div class="phone-content">
+
+        <i class="fa-solid fa-phone"></i>
+
+        <div class="phone-text">
+            <p>Contact this number:</p>
+            <strong>+62 823 - 2533 - 7253</strong>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2024 Sweetiis. Premium Taste from us.
+    </div>
+
+</footer>
+
+<script>
+
+
+
+function addToCart(name, price, image){
+
+
+
+    let cart =
+
+        JSON.parse(localStorage.getItem("cart"))
+
+        || [];
+
+
+
+    let existing =
+
+        cart.find(item => item.name === name);
+
+
+
+    if(existing){
+
+
+
+        existing.qty++;
+
+
+
+    }else{
+
+
+
+        cart.push({
+
+
+
+            name:name,
+
+            price:price,
+
+            image:image,
+
+            qty:1
+
+
+
+        });
+
+
+
+    }
+
+
+
+    localStorage.setItem(
+
+        "cart",
+
+        JSON.stringify(cart)
+
+    );
+
+
+
+    window.location.href = "cart.html";
+
+
+
+}
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us - Sweetiis</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="images/logo sweetii.png" alt="Sweetiis Logo">
+        </div>
+
+        <ul>
+   <li><a href="index.html">Home</a></li>
+   <li><a href="about.html">About Us</a></li>
+   <li><a href="products.html">Products</a></li>
+   <li><a href="contact-us.html">Contact Us</a></li>
+</ul>
+
+<div class="icons">
+
+    <a href="products.html">
+        <img class="search-icon"
+             src="images/search.png">
+    </a>
+
+    <a href="cart.html">
+        <img class="cart-icon"
+             src="images/cart.png">
+    </a>
+
+    <a href="signin.html">
+        <img class="profile-icon"
+             src="images/person-circle 2.png">
+    </a>
+
+</div>
+
+    </nav>
+
+    <section class="cart-banner">
+
+        <div class="cart-logo">
+            <img src="images/logo-sweetiis-white.png" alt="Sweetiis">
+        </div>
+
+        <p>One more step to your sweet happiness!</p>
+
+    </section>
+
+    <section class="checkout-container">
+
+    <div class="shipping-card">
+
+        <h2>Shipping Information</h2>
+
+        <div class="shipping-form">
+
+            <div class="input-row">
+
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text"
+                        id="fullName"
+                        placeholder="Enter your name">
+                </div>
+
+                <div class="input-group">
+                    <label>Phone Number</label>
+                    <input type="text"
+                        id="phoneNumber"
+                        placeholder="+62 812...">
+                </div>
+
+            </div>
+
+            <div class="input-group address-group">
+
+                <label>Shipping Address</label>
+
+                <textarea id="address"
+                placeholder="Jln. Letjend S Parman III No.12b">
+                </textarea>
+
+            </div>
+
+        </div>
+
+        <!-- ORDER ITEMS -->
+
+        <div class="order-items">
+
+            <h3>
+                <i class="fa-solid fa-cart-shopping"></i>
+                Order Items
+            </h3>
+
+            <div id="cartItems"></div>
+
+        </div>
+
+        </div>
+
+    <div class="summary-card">
+
+        <h2>Your Price Summary</h2>
+
+    <div class="summary-line"></div>
+
+    <div class="summary-row">
+        <span>Subtotal</span>
+        <span id="subtotalPrice">Rp 300.000</span>
+    </div>
+
+    <div class="summary-row total-price">
+        <span>Total Price</span>
+        <span id="totalPrice">Rp 310.000</span>
+    </div>
+
+    <div class="summary-line"></div>
+
+    <h3 class="payment-title">
+        Payment Method
+    </h3>
+
+    <div class="payment-option">
+
+        <input type="radio" name="payment" id="qris">
+
+        <span>QRIS</span>
+
+        <img src="images/qris.png" alt="QRIS">
+
+    </div>
+
+    <div class="payment-option">
+
+        <input type="radio" name="payment" id="bank">
+
+        <span>Transfer Bank</span>
+
+        <img src="images/bank.png" alt="Bank">
+
+    </div>
+
+    <button id="paymentBtn" class="payment-btn" onclick="showQRIS()">
+        PAYMENT
+    </button>
+
+    <div id="qris-box">
+
+        <img src="images/qris-payment.png"
+             class="qris-img"
+             alt="QRIS Payment">
+
+        <button class="confirm-payment-btn"
+            onclick="completePayment()">
+            Saya Sudah Bayar
+        </button>
+
+    </div>
+
+
+<div id="bank-box">
+
+    <div class="bank-card">
+
+        <div class="bank-header">
+
+            <img src="images/bank.png" alt="Bank">
+
+            <div>
+
+                <h4>Bank Mandiri</h4>
+
+                <p>Virtual Account</p>
+
+            </div>
+
+        </div>
+
+        <div class="va-section">
+
+            <label>Nomor Virtual Account</label>
+
+            <div class="copy-box">
+
+                <span id="vaNumber">
+                    8801081234567890
+                </span>
+
+                <button onclick="copyVA()">
+                    Salin
+                </button>
+
+            </div>
+
+        </div>
+
+        <button class="confirm-payment-btn"
+            onclick="completePayment()">
+            Saya Sudah Bayar
+        </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Logo -->
+        <div class="footer-brand">
+            <img src="images/logo sweetii.png" alt="Sweetiis">
+
+            <p>Follow and contact us on:</p>
+
+    <div class="social-icons">
+    <a href="mailto:sweetiisstmk@gmail.com">
+        <img src="images/gmail.png" alt="Email">
+    </a>
+
+    <a href="https://wa.me/6282325337253">
+        <img src="images/wa.png" alt="WhatsApp">
+    </a>
+
+    <a href="https://instagram.com/sweetiis">
+        <img src="images/Instagram.png" alt="Instagram">
+    </a>
+    </div>
+
+</div>
+
+        <!-- Navigation -->
+        <div class="footer-nav">
+            <h3>OUR SWEETIIS NAVIGATION</h3>
+
+            <div class="nav-links">
+
+                <div>
+                    <a href="#">HOME</a>
+                    <a href="#">ABOUT US</a>
+                    <a href="#">PRODUCTS</a>
+                </div>
+
+                <div>
+                    <a href="#">LOCATION</a>
+                    <a href="#">CONTACT US</a>
+                    <a href="#">PROFILE</a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-contact">
+
+    <h3>CONTACTS</h3>
+
+    <p>
+        <i class="fa-solid fa-location-dot"></i>
+        Address : Jalan Seroja, Timika
+    </p>
+
+    <p>
+        <i class="fa-solid fa-envelope"></i>
+        Email : sweetiisstmk@gmail.com
+    </p>
+
+    <div class="phone-box">
+
+    <div class="phone-content">
+
+        <i class="fa-solid fa-phone"></i>
+
+        <div class="phone-text">
+            <p>Contact this number:</p>
+            <strong>+62 823 - 2533 - 7253</strong>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2024 Sweetiis. Premium Taste from us.
+    </div>
+
+</footer>
+
+<script>
+
+function showQRIS(){
+
+    let name =
+        document.getElementById("fullName").value;
+
+    let phone =
+        document.getElementById("phoneNumber").value;
+
+    let address =
+        document.getElementById("address").value;
+
+    if(
+        name === "" ||
+        phone === "" ||
+        address === ""
+    ){
+
+        alert(
+            "Please complete shipping information first!"
+        );
+
+        return;
+    }
+
+    let qris =
+        document.getElementById("qris");
+
+    let bank =
+        document.getElementById("bank");
+
+    let qrisBox =
+        document.getElementById("qris-box");
+
+    let bankBox =
+        document.getElementById("bank-box");
+
+    let paymentBtn =
+        document.getElementById("paymentBtn");
+
+    qrisBox.style.display = "none";
+    bankBox.style.display = "none";
+
+    if(qris.checked){
+
+    qrisBox.style.display = "block";
+    paymentBtn.style.display = "none";
+}
+
+if(bank.checked){
+
+    bankBox.style.display = "block";
+    paymentBtn.style.display = "none";
+}
+}
+
+function copyVA(){
+
+    let va =
+        document.getElementById("vaNumber").innerText;
+
+    navigator.clipboard.writeText(va);
+
+    alert("Nomor Virtual Account berhasil disalin!");
+}
+
+let cart =
+JSON.parse(localStorage.getItem("cart"))
+|| [];
+
+let cartContainer =
+document.getElementById("cartItems");
+
+let subtotal = 0;
+
+cart.forEach((item,index)=>{
+
+    subtotal += item.price * item.qty;
+
+    cartContainer.innerHTML += `
+
+    <div class="order-item">
+
+        <img src="${item.image}" alt="${item.name}">
+
+        <div class="item-info">
+
+            <h4>${item.name}</h4>
+
+            <div class="qty-box">
+
+                <button onclick="decreaseQty(${index})">
+                    -
+                </button>
+
+                <span>
+                    ${item.qty}
+                </span>
+
+                <button onclick="increaseQty(${index})">
+                    +
+                </button>
+
+            </div>
+
+            <i class="fa-regular fa-trash-can trash-icon"
+               onclick="deleteItem(${index})"></i>
+
+        </div>
+
+        <div class="item-price">
+
+            Rp${(item.price * item.qty)
+            .toLocaleString("id-ID")}
+
+        </div>
+
+    </div>
+
+    `;
+
+});
+
+document.getElementById("subtotalPrice")
+.innerText =
+"Rp " +
+subtotal.toLocaleString("id-ID");
+
+document.getElementById("totalPrice")
+.innerText =
+"Rp " +
+subtotal.toLocaleString("id-ID");
+
+document.getElementById("paymentAmount")
+.innerText =
+"Rp " +
+subtotal.toLocaleString("id-ID");
+
+function increaseQty(index){
+
+    let cart =
+    JSON.parse(localStorage.getItem("cart"));
+
+    cart[index].qty++;
+
+    localStorage.setItem(
+        "cart",
+        JSON.stringify(cart)
+    );
+
+    location.reload();
+}
+
+function decreaseQty(index){
+
+    let cart =
+    JSON.parse(localStorage.getItem("cart"));
+
+    if(cart[index].qty > 1){
+
+        cart[index].qty--;
+    }
+
+    localStorage.setItem(
+        "cart",
+        JSON.stringify(cart)
+    );
+
+    location.reload();
+}
+
+function deleteItem(index){
+
+    let cart =
+    JSON.parse(localStorage.getItem("cart"));
+
+    cart.splice(index,1);
+
+    localStorage.setItem(
+        "cart",
+        JSON.stringify(cart)
+    );
+
+    location.reload();
+}
+
+function addToCart(name,price,image){
+
+    let cart =
+    JSON.parse(localStorage.getItem("cart"))
+    || [];
+
+    let existing =
+    cart.find(item =>
+        item.name === name
+    );
+
+    if(existing){
+
+        existing.qty++;
+
+    }else{
+
+        cart.push({
+
+            name:name,
+
+            price:price,
+
+            image:image,
+
+            qty:1
+        });
+    }
+
+    localStorage.setItem(
+        "cart",
+        JSON.stringify(cart)
+    );
+
+    alert(name + " berhasil ditambahkan ke cart!");
+}
+
+function completePayment(){
+
+    let qris =
+        document.getElementById("qris");
+
+    let bank =
+        document.getElementById("bank");
+
+    if(!qris.checked && !bank.checked){
+
+        alert(
+            "Silakan pilih metode pembayaran!"
+        );
+
+        return;
+    }
+
+    let paymentMethod =
+        qris.checked
+        ? "QRIS"
+        : "Transfer Bank";
+
+    localStorage.setItem(
+        "paymentMethod",
+        paymentMethod
+    );
+
+    localStorage.setItem(
+        "paymentTotal",
+        document.getElementById("totalPrice")
+        .innerText
+    );
+
+    let orderId =
+        "#UMKM-" +
+        Math.floor(
+            100000 + Math.random() * 900000
+        );
+
+    localStorage.setItem(
+        "orderId",
+        orderId
+    );
+
+    localStorage.removeItem("cart");
+
+    window.location.href =
+        "success.html";
+}
+
+</script>
+
+</body>
+</html>

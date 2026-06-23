@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sweetiis</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+       <div class="logo">
+            <img src="images/logo sweetii.png" alt="Sweetiis Logo">
+        </div>
+
+        <ul>
+   <li><a href="index.html">Home</a></li>
+   <li><a href="about.html">About Us</a></li>
+   <li><a href="products.html">Products</a></li>
+   <li><a href="contact-us.html">Contact Us</a></li>
+</ul>
+
+<div class="icons">
+
+    <a href="products.html">
+        <img class="search-icon"
+             src="images/search.png">
+    </a>
+
+    <a href="cart.html">
+        <img class="cart-icon"
+             src="images/cart.png">
+    </a>
+
+    <a href="signin.html">
+        <img class="profile-icon"
+             src="images/person-circle 2.png">
+    </a>
+
+</div>
+</nav>
+
+    <section class="hero">
+    <div class="overlay">
+
+        <h2>Where Taste Meets Quality</h2>
+
+        <div class="only-at">only at</div>
+
+        <h1>Sweetiis</h1>
+
+        <p>
+            Sweetiis menghadirkan perpaduan rasa manis dan gurih dalam setiap hidangan,
+            dibuat dengan kualitas terbaik untuk pengalaman kuliner yang istimewa.
+        </p>
+
+        <a href="products.html">
+            <button>Order Now ➜</button>
+        </a>
+    </div>
+</section>
+
+    <section class="best-seller">
+
+    <div class="best-header">
+        <div>
+            <p class="subtitle">Customer Favorite</p>
+            <h2>Our Best Sellers</h2>
+        </div>
+
+        <a href="products.html">View All Products →</a>
+    </div>
+
+    <div class="products">
+
+        <div class="product-card makanan">
+
+    <a href="klapatart-large-detail.html">
+        <img src="images/Klapatart Large.jpeg" alt="Klapatart Large">
+    </a>
+
+    <div class="product-info">
+
+        <h3>Klapatart Large</h3>
+
+        <p>Rp. 115.000</p>
+
+        <button onclick="addToCart(
+            'Klapatart Large',
+            115000, 
+            'images/Klapatart Large.jpeg'
+        )">
+            Add To Cart
+        </button>
+
+    </div>
+
+</div>
+
+        <div class="product-card makanan">
+
+    <a href="beef-mentai-detail.html">
+        <img src="images/Beef mentai rice regular.jpeg">
+    </a>
+
+    <div class="product-info">
+
+        <h3>Beef Mentai Rice</h3>
+
+        <p>Rp. 145.000</p>
+
+        <button onclick="addToCart(
+            'Beef Mentai Rice',
+            145000,
+            'images/Beef mentai rice regular.jpeg'
+        )">
+            Add To Cart
+        </button>
+
+    </div>
+
+</div>
+
+        <div class="product-card makanan">
+
+    <a href="mentai-chicken-rice-detail.html">
+        <img src="images/mentai Chicken Rice.jpeg" alt="Mentai Chicken Rice">
+    </a>
+
+    <div class="product-info">
+
+        <h3>Mentai Chicken Rice</h3>
+
+        <p>Rp. 40.000</p>
+
+        <button onclick="addToCart(
+            'Mentai Chicken Rice',
+            40000,
+            'images/mentai Chicken Rice.jpeg'
+        )">
+            Add To Cart
+        </button>
+
+    </div>
+
+</div>
+
+</section>
+
+<section class="about">
+
+    <div class="star star1">★</div>
+    <div class="star star2">★</div>
+    <div class="star star3">★</div>
+    <div class="star star4">★</div>
+
+    <div class="about-text">
+        <p class="about-subtitle">ABOUT US</p>
+
+        <div class="flower-extra"></div>
+        <p>
+            Berawal dari kecintaan terhadap dunia kuliner, Sweetiis
+            berkomitmen menghadirkan makanan dan dessert berkualitas
+            dengan rasa yang lezat, tampilan menarik, serta pelayanan
+            terbaik bagi setiap pelanggan.
+        </p>
+
+        <a href="about.html">
+            <button>Read More →</button>
+        </a>
+        
+    </div>
+
+    <div class="about-image">
+        <div class="circle-bg">
+            <img src="images/about.png" alt="About Sweetiis">
+        </div>
+    </div>
+
+</section>
+
+</section>
+
+<section class="testimoni">
+
+    <div class="testimoni-header">
+        <h2>What Do Sweetiis Say About Us?</h2>
+        <p>
+            Lihat pengalaman dan ulasan pelanggan yang telah menikmati
+            hidangan dari Sweetiis.
+        </p>
+    </div>
+
+    <div class="testimoni-container">
+
+        <div class="review-card">
+            <div class="rating">⭐ 4.8</div>
+
+            <p>
+                Semua menu nya enak-enak semua. Tidak ada yang mengecewakan
+                dan nagih.
+            </p>
+
+            <div class="review-user">
+                <img src="images/vincelli.png" alt="Vincelli">
+                <span>Vincelli</span>
+            </div>
+        </div>
+
+        <div class="review-card">
+            <div class="rating">⭐ 4.9</div>
+
+            <p>
+                Love banget sama Sweetiis! Rasanya enak banget dan bikin nagih.
+            </p>
+
+            <div class="review-user">
+                <img src="images/hana cheryl.png" alt="Hana Cheryl">
+                <span>Hana Cheryl</span>
+            </div>
+        </div>
+
+        <div class="review-card">
+            <div class="rating">⭐ 5.0</div>
+
+            <p>
+                Mentainya enak banget, rasanya nagih banget bikin pingin repeat order.
+            </p>
+
+            <div class="review-user">
+                <img src="images/supri.png" alt="Supri">
+                <span>Supri</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="faq">
+
+    <div class="faq-container">
+
+        <div class="faq-left">
+            <h2>
+                Ingin lebih tau tentang Sweetiis?
+            </h2>
+
+            <p>
+                Temukan jawaban atas pertanyaan yang paling sering diajukan seputar produk dan layanan Sweetiis.
+            </p>
+        </div>
+
+        <div class="faq-right">
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Apa itu Sweetiis?
+                    <span>⌃</span>
+                </div>
+
+                <div class="faq-answer">
+                    Sweetiis adalah UMKM kuliner yang menyediakan berbagai makanan dan dessert berkualitas dengan rasa lezat dan tampilan menarik.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Layanan apa saja yang tersedia di Sweetiis?
+                    <span>⌃</span>
+                </div>
+
+                <div class="faq-answer">
+                    Sweetiis menyediakan layanan pemesanan makanan dan dessert secara online, serta layanan pengiriman ke alamat Anda.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Bagaimana cara melakukan checkout?
+                    <span>⌃</span>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Metode pembayaran apa saja yang tersedia?
+                    <span>⌃</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Logo -->
+        <div class="footer-brand">
+            <img src="images/logo sweetii.png" alt="Sweetiis">
+
+            <p>Follow and contact us on:</p>
+
+    <div class="social-icons">
+    <a href="mailto:sweetiisstmk@gmail.com">
+        <img src="images/gmail.png" alt="Email">
+    </a>
+
+    <a href="https://wa.me/6282325337253">
+        <img src="images/wa.png" alt="WhatsApp">
+    </a>
+
+    <a href="https://instagram.com/sweetiis">
+        <img src="images/Instagram.png" alt="Instagram">
+    </a>
+    </div>
+
+</div>
+
+        <!-- Navigation -->
+        <div class="footer-nav">
+            <h3>OUR SWEETIIS NAVIGATION</h3>
+
+            <div class="nav-links">
+
+                <div>
+                    <a href="#">HOME</a>
+                    <a href="#">ABOUT US</a>
+                    <a href="#">PRODUCTS</a>
+                </div>
+
+                <div>
+                    <a href="#">LOCATION</a>
+                    <a href="#">CONTACT US</a>
+                    <a href="#">PROFILE</a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-contact">
+
+    <h3>CONTACTS</h3>
+
+    <p>
+        <i class="fa-solid fa-location-dot"></i>
+        Address : Jalan Seroja, Timika
+    </p>
+
+    <p>
+        <i class="fa-solid fa-envelope"></i>
+        Email : sweetiisstmk@gmail.com
+    </p>
+
+    <div class="phone-box">
+
+    <div class="phone-content">
+
+        <i class="fa-solid fa-phone"></i>
+
+        <div class="phone-text">
+            <p>Contact this number:</p>
+            <strong>+62 823 - 2533 - 7253</strong>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2024 Sweetiis. Premium Taste from us.
+    </div>
+
+</footer>
+
+<script>
+
+function addToCart(name, price, image){
+
+
+
+    let cart =
+
+        JSON.parse(localStorage.getItem("cart"))
+
+        || [];
+
+
+
+    let existing =
+
+        cart.find(item => item.name === name);
+
+
+
+    if(existing){
+
+
+
+        existing.qty++;
+
+
+
+    }else{
+
+
+
+        cart.push({
+
+
+
+            name:name,
+
+            price:price,
+
+            image:image,
+
+            qty:1
+
+
+
+        });
+
+
+
+    }
+
+
+
+    localStorage.setItem(
+
+        "cart",
+
+        JSON.stringify(cart)
+
+    );
+
+
+
+    window.location.href = "cart.html";
+
+
+
+}
+
+</script>
+
+</body>
+</html>

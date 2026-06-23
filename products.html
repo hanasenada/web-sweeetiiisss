@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us - Sweetiis</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="images/logo sweetii.png" alt="Sweetiis Logo">
+        </div>
+
+        <ul>
+   <li><a href="index.html">Home</a></li>
+   <li><a href="about.html">About Us</a></li>
+   <li><a href="products.html">Products</a></li>
+   <li><a href="contact-us.html">Contact Us</a></li>
+</ul>
+
+<div class="icons">
+
+    <a href="products.html">
+        <img class="search-icon"
+             src="images/search.png">
+    </a>
+
+    <a href="cart.html">
+        <img class="cart-icon"
+             src="images/cart.png">
+    </a>
+
+    <a href="signin.html">
+        <img class="profile-icon"
+             src="images/person-circle 2.png">
+    </a>
+
+</div>
+
+    </nav>
+
+<section class="menu-section">
+
+    <p class="menu-label">OUR MENU</p>
+
+    <h1>Sweetiis List Menu.</h1>
+
+    <p class="menu-desc">
+        Sweetiis menyajikan berbagai pilihan makanan, minuman dan dessert
+        yang dibuat dengan kualitas terbaik.
+    </p>
+
+    <div class="search-container">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Cari menu..."
+            onkeyup="searchProduct()">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+    </div>
+
+    <div class="filter-container">
+
+        <span>Filter by:</span>
+
+        <button class="active"
+            onclick="filterProduct('all')">
+            All
+        </button>
+
+        <button
+            onclick="filterProduct('makanan')">
+            Makanan
+        </button>
+
+        <button
+            onclick="filterProduct('minuman')">
+            Minuman
+        </button>
+
+    </div>
+
+</section>
+
+<section class="product-grid">
+
+<div class="product-card makanan">
+
+    <a href="product-detail.html">
+        <img src="images/brownie.jpeg" alt="Brownie Box">
+    </a>
+
+    <div class="product-info">
+
+        <h3>Brownie Box</h3>
+
+        <p>Rp. 30.000</p>
+
+        <button onclick="addToCart(
+            'Brownie Box',
+            30000,
+            'images/brownie.jpeg'
+        )">
+            Add to Cart
+        </button>
+
+    </div>
+
+</div>
+
+<div class="product-card makanan">
+
+    <a href="beef-mentai-detail.html">
+        <img src="images/Beef mentai rice regular.jpeg">
+    </a>
+
+    <div class="product-info">
+
+        <h3>Beef Mentai Rice</h3>
+
+        <p>Rp. 145.000</p>
+
+        <button onclick="addToCart(
+            'Beef Mentai Rice',
+            145000,
+            'images/Beef mentai rice regular.jpeg'
+        )">
+            Add To Cart
+        </button>
+
+    </div>
+
+</div>
+
+<div class="product-card makanan">
+
+    <a href="cookies-classic-detail.html">
+        <img src="images/cookies.jpg" alt="Cookies Classic">
+    </a>
+
+    <div class="product-info">
+
+        <h3>Cookies Classic</h3>
+
+        <p>Rp. 15.000</p>
+
+        <button onclick="addToCart(
+            'Cookies Classic',
+            15000,
+            'images/cookies.jpg'
+        )">
+            Add To Cart
+        </button>
+
+    </div>
+
+</div>
+
+<div class="product-card makanan">
+
+    <a href="sate-taichan-detail.html">
+        <img src="images/sate taichan.jpeg" alt="Sate Taichan">
+    </a>
+
+    <div class="product-info">
+
+        <h3>Sate Taichan</h3>
+
+        <p>Rp. 35.000</p>
+
+        <button onclick="addToCart(
+            'Sate Taichan',
+            35000,
+            'images/sate taichan.jpeg'
+        )">
+            Add To Cart
+        </button>
+
+    </div>
+
+</div>
+
+<div class="product-card minuman">
+
+    <a href="cappucino-cincau-detail.html">
+        <img src="images/cappucino cincau.jpeg" alt="Cappucino Cincau">
+    </a>
+
+    <div class="product-info">
+
+        <h3>Cappucino Cincau</h3>
+
+        <p>Rp. 25.000</p>
+
+        <button onclick="addToCart(
+            'Cappucino Cincau',
+            25000,
+            'images/cappucino cincau.jpeg'
+        )">
+            Add To Cart
+        </button>
+
+    </div>
+
+</div>
+
+<div class="product-card makanan">
+
+    <a href="klapatart-large-detail.html">
+        <img src="images/Klapatart Large.jpeg" alt="Klapatart Large">
+    </a>
+
+    <div class="product-info">
+
+        <h3>Klapatart Large</h3>
+
+        <p>Rp. 115.000</p>
+
+        <button onclick="addToCart(
+            'Klapatart Large',
+            115000, 
+            'images/Klapatart Large.jpeg'
+        )">
+            Add To Cart
+        </button>
+
+    </div>
+
+</div>
+
+<div class="product-card makanan">
+
+    <a href="dimsum-mentai-detail.html">
+        <img src="images/dimsum mentai.jpeg" alt="Dimsum Mentai">
+    </a>
+
+    <div class="product-info">
+
+        <h3>Dimsum Mentai</h3>
+
+        <p>Rp. 60.000</p>
+
+        <button onclick="addToCart(
+            'Dimsum Mentai',
+            60000,
+            'images/dimsum mentai.jpeg'
+        )">
+            Add To Cart
+        </button>
+
+    </div>
+
+</div>
+
+<div class="product-card makanan">
+
+    <a href="mango-sticky-rice-detail.html">
+        <img src="images/mango sticky rice.jpeg" alt="Mango Sticky Rice">
+    </a>
+
+    <div class="product-info">
+
+        <h3>Mango Sticky Rice</h3>
+
+        <p>Rp. 30.000</p>
+
+        <button onclick="addToCart(
+            'Mango Sticky Rice',
+            30000,
+            'images/mango sticky rice.jpeg'
+        )">
+            Add To Cart
+        </button>
+
+    </div>
+
+</div>
+
+<div class="product-card makanan">
+
+    <a href="mentai-chicken-rice-detail.html">
+        <img src="images/mentai Chicken Rice.jpeg" alt="Mentai Chicken Rice">
+    </a>
+
+    <div class="product-info">
+
+        <h3>Mentai Chicken Rice</h3>
+
+        <p>Rp. 40.000</p>
+
+        <button onclick="addToCart(
+            'Mentai Chicken Rice',
+            40000,
+            'images/mentai Chicken Rice.jpeg'
+        )">
+            Add To Cart
+        </button>
+
+    </div>
+
+</div>
+
+<div class="product-card makanan">
+
+    <a href="mochi-mangga-detail.html">
+        <img src="images/mochi mangga.jpg" alt="Mochi Mangga">
+    </a>
+
+    <div class="product-info">
+
+        <h3>Mochi Mangga</h3>
+
+        <p>Rp. 130.000</p>
+
+        <button onclick="addToCart(
+            'Mochi Mangga',
+            130000,
+            'images/mochi mangga.jpg'
+        )"> 
+            Add To Cart
+        </button>
+    </div>
+
+</div>
+
+<div class="product-card minuman">
+
+    <a href="mango-smoothies-detail.html">
+        <img src="images/mango smoothies.jpg" alt="Mango Smoothies">
+    </a>
+
+    <div class="product-info">
+
+        <h3>Mango Smoothies</h3>
+
+        <p>Rp. 25.000</p>
+
+       <button onclick="addToCart(
+            'Mango Smoothies',
+            25000,
+            'images/mango smoothies.jpg'
+        )">
+            Add To Cart
+        </button>
+
+    </div>
+
+</div>
+
+<div class="product-card makanan">
+
+    <a href="mochi-chocolate-detail.html">
+        <img src="images/mochi chocolate.jpg" alt="Mochi Chocolate">
+    </a>
+
+    <div class="product-info">
+
+        <h3>Mochi Chocolate</h3>
+
+        <p>Rp. 110.000</p>
+
+        <button onclick="addToCart(
+            'Mochi Chocolate',
+            110000,
+            'images/mochi chocolate.jpg'
+        )">
+            Add To Cart
+        </button>
+
+    </div>
+
+</div>
+
+<div class="product-card minuman">
+
+    <a href="sweet-choco-detail.html">
+        <img src="images/sweet choco.jpg" alt="Sweet Choco">
+    </a>
+
+    <div class="product-info">
+
+        <h3>Sweet Choco</h3>
+
+        <p>Rp. 30.000</p>
+
+        <button onclick="addToCart(
+            'Sweet Choco',
+            30000,
+            'images/sweet choco.jpg'
+        )">
+            Add To Cart
+        </button>
+
+    </div>
+
+</div>
+
+<div class="product-card makanan">
+
+    <a href="mochi-mix-isi-16-detail.html">
+        <img src="images/mochi mix isi 16.jpg" alt="Mochi Mix Isi 16">
+    </a>
+
+    <div class="product-info">
+
+        <h3>Mochi Mix Isi 16</h3>
+
+        <p>Rp. 210.000</p>
+
+        <button onclick="addToCart(
+            'Mochi Mix Isi 16',
+            210000,
+            'images/mochi mix isi 16.jpg'
+        )">
+            Add To Cart
+        </button>
+
+    </div>
+
+</div>
+
+<div class="product-card makanan">
+
+    <a href="klapatart-oval-detail.html">
+        <img src="images/klapatart oval.jpeg" alt="Klapatart Oval">
+    </a>
+
+    <div class="product-info">
+
+        <h3>Klapatart Oval</h3>
+
+        <p>Rp. 85.000</p>
+
+        <button onclick="addToCart(
+            'Klapatart Oval',
+            85000,
+            'images/klapatart oval.jpeg'
+        )">
+            Add To Cart
+        </button>
+
+    </div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Logo -->
+        <div class="footer-brand">
+            <img src="images/logo sweetii.png" alt="Sweetiis">
+
+            <p>Follow and contact us on:</p>
+
+    <div class="social-icons">
+    <a href="mailto:sweetiisstmk@gmail.com">
+        <img src="images/gmail.png" alt="Email">
+    </a>
+
+    <a href="https://wa.me/6282325337253">
+        <img src="images/wa.png" alt="WhatsApp">
+    </a>
+
+    <a href="https://instagram.com/sweetiis">
+        <img src="images/Instagram.png" alt="Instagram">
+    </a>
+    </div>
+
+</div>
+
+        <!-- Navigation -->
+        <div class="footer-nav">
+            <h3>OUR SWEETIIS NAVIGATION</h3>
+
+            <div class="nav-links">
+
+                <div>
+                    <a href="#">HOME</a>
+                    <a href="#">ABOUT US</a>
+                    <a href="#">PRODUCTS</a>
+                </div>
+
+                <div>
+                    <a href="#">LOCATION</a>
+                    <a href="#">CONTACT US</a>
+                    <a href="#">PROFILE</a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-contact">
+
+    <h3>CONTACTS</h3>
+
+    <p>
+        <i class="fa-solid fa-location-dot"></i>
+        Address : Jalan Seroja, Timika
+    </p>
+
+    <p>
+        <i class="fa-solid fa-envelope"></i>
+        Email : sweetiisstmk@gmail.com
+    </p>
+
+    <div class="phone-box">
+
+    <div class="phone-content">
+
+        <i class="fa-solid fa-phone"></i>
+
+        <div class="phone-text">
+            <p>Contact this number:</p>
+            <strong>+62 823 - 2533 - 7253</strong>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2024 Sweetiis. Premium Taste from us.
+    </div>
+
+</footer>
+
+<script>
+
+function addToCart(name, price, image){
+
+    let cart =
+        JSON.parse(localStorage.getItem("cart"))
+        || [];
+
+    let existing =
+        cart.find(item => item.name === name);
+
+    if(existing){
+
+        existing.qty++;
+
+    }else{
+
+        cart.push({
+            name:name,
+            price:price,
+            image:image,
+            qty:1
+        });
+
+    }
+
+    localStorage.setItem(
+        "cart",
+        JSON.stringify(cart)
+    );
+
+    alert(name + " berhasil ditambahkan ke cart!");
+
+}
+
+</script>
+
+<script>
+
+function filterProduct(category){
+
+    let products =
+        document.querySelectorAll(".product-card");
+
+    products.forEach(product=>{
+
+        if(
+            category === "all" ||
+            product.classList.contains(category)
+        ){
+
+            product.style.display = "block";
+
+        }else{
+
+            product.style.display = "none";
+
+        }
+
+    });
+
+}
+
+</script>
+
+<script>
+
+function searchProduct(){
+
+    let keyword =
+        document.getElementById("searchInput")
+        .value
+        .toLowerCase();
+
+    let products =
+        document.querySelectorAll(".product-card");
+
+    products.forEach(product=>{
+
+        let productName =
+            product.querySelector("h3")
+            .innerText
+            .toLowerCase();
+
+        if(productName.includes(keyword)){
+
+            product.style.display = "block";
+
+        }else{
+
+            product.style.display = "none";
+
+        }
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>
